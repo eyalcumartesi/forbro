@@ -15,23 +15,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
-const navItems = [
-	{
-		name: "Home",
-		link: "/",
-	},
-	{
-		name: "Catalogo",
-		link: "/catalogo",
-	},
-	{
-		name: "Contactanos",
-		link: "/contactus",
-	},
-];
 
 function Navbar(props) {
-	const { window } = props;
+	const { window, navItems = [], name } = props;
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 
 	const handleDrawerToggle = () => {
@@ -41,7 +27,7 @@ function Navbar(props) {
 	const drawer = (
 		<Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
 			<Typography variant="h6" sx={{ my: 2 }}>
-				FORBRO
+				{name}
 			</Typography>
 			<Divider />
 			<List>
@@ -62,7 +48,7 @@ function Navbar(props) {
 	return (
 		<Box className="flex flex-col">
 			<CssBaseline />
-			<AppBar sx={{ background: "#8D99AE", opacity: "50%" }} component="nav">
+			<AppBar sx={{ background: "#2B2D42", opacity: 0.6 }} component="nav">
 				<Toolbar>
 					<IconButton
 						color="inherit"
@@ -78,11 +64,15 @@ function Navbar(props) {
 						component="div"
 						sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
 					>
-						FORBRO
+						{name}
 					</Typography>
 					<Box sx={{ display: { xs: "none", sm: "block" } }}>
 						{navItems.map((item) => (
-							<Button key={item.name} sx={{ color: "inherit" }} href={item.link}>
+							<Button
+								key={item.name}
+								sx={{ color: "inherit" }}
+								href={item.link}
+							>
 								{item.name}
 							</Button>
 						))}

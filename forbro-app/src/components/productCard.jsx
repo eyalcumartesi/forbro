@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader } from "@mui/material";
+import { Card } from "@mui/material";
 
 function ProductCard({ imageUrl, index }) {
 	// Define a custom style for resizing the images
@@ -11,7 +11,6 @@ function ProductCard({ imageUrl, index }) {
 	return (
 		<Card className="flex flex-col items-center p-4 gap-0">
 			<img src={imageUrl} alt="Sock" style={imageStyle} />
-			<CardHeader title={index} />
 		</Card>
 	);
 }
