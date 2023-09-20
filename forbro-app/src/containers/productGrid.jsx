@@ -3,8 +3,12 @@ import ProductCard from "../components/productCard";
 import { Container } from "@mui/material";
 
 function ProductGrid() {
-	const babySockImages = require.context("../images/baby", false, /\.(PNG)$/);
-	const menSockImages = require.context("../images/men", false, /\.(PNG)$/);
+	const babySockImages = require.context(
+		"../images/baby",
+		false,
+		/\.(PNG|JPG)$/
+	);
+	const menSockImages = require.context("../images/men", false, /\.(PNG|JPG)$/);
 
 	// Get an array of all baby sock image URLs
 	const babySockImageUrls = babySockImages.keys().map(babySockImages);
