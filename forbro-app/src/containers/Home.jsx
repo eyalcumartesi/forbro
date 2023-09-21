@@ -44,7 +44,7 @@ const Home = ({ name, image, heroImage }) => {
 					src={image}
 					width={"800px"}
 					alt={name}
-					className="opacity-70"
+					className={name === "arnet" ? "opacity-70" : ""}
 					loading="lazy"
 				/>
 				<div className="flex gap-4">
