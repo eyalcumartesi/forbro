@@ -19,6 +19,10 @@ const navItems = [
 		name: "Forbro",
 		link: "/forbro",
 	},
+	{
+		name: "Contactanos",
+		link: "mailto:ersel@marsutex.com",
+	},
 ];
 
 function MarsutexApp() {

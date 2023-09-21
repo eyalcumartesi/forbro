@@ -14,8 +14,12 @@ const navItems = [
 		link: "/forbro",
 	},
 	{
-		name: "Catalogo",
-		link: "/catalogo",
+		name: "Bebe",
+		link: "/forbro/baby",
+	},
+	{
+		name: "Hombre",
+		link: "/forbro/men",
 	},
 	{
 		name: "Marsutex",
@@ -23,7 +27,7 @@ const navItems = [
 	},
 	{
 		name: "Contactanos",
-		link: "/contactus",
+		link: "mailto:ersel@marsutex.com",
 	},
 ];
 
@@ -33,7 +37,8 @@ function ForbroApp() {
 			<Navbar navItems={navItems} name={"FORBRO"} />
 			<Container>
 				<Routes basename="/forbro">
-					<Route path="/catalogo" element={<ProductGrid />} />
+					<Route path="/men" element={<ProductGrid name={"Hombre"} />} />
+					<Route path="/baby" element={<ProductGrid name={"Bebe"} />} />
 					<Route
 						path="/"
 						element={

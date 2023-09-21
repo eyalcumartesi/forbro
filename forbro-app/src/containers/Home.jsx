@@ -40,11 +40,17 @@ const Home = ({ name, image, heroImage }) => {
 				>
 					{name}
 				</Typography> */}
-				<img src={image} width={"800px"} alt={name} className="opacity-70" />
+				<img
+					src={image}
+					width={"800px"}
+					alt={name}
+					className="opacity-70"
+					loading="lazy"
+				/>
 				<div className="flex gap-4">
 					<Button
 						sx={name === "ARNET" ? arnetSX : forbroSX}
-						href="mailto:erselcumartesi@gmail.com"
+						href="mailto:ersel@marsutex.com"
 					>
 						Contactanos
 					</Button>

@@ -14,8 +14,12 @@ const navItems = [
 		link: "/arnet",
 	},
 	{
-		name: "Catalogo",
-		link: "/arnet/catalogo",
+		name: "Brasier",
+		link: "/arnet/brasier",
+	},
+	{
+		name: "Panties",
+		link: "/arnet/panties",
 	},
 	{
 		name: "Marsutex",
@@ -23,17 +27,18 @@ const navItems = [
 	},
 	{
 		name: "Contactanos",
-		link: "/arnet/contactus",
+		link: "mailto:ersel@marsutex.com",
 	},
 ];
 
 function ArnetApp() {
 	return (
 		<Box>
-			<Navbar navItems={navItems} name={"Arnet Intima"} />
+			<Navbar navItems={navItems} name={"Arnet Intima"} />{" "}
 			<Container>
 				<Routes basename="/arnet">
-					<Route path="/catalogo" element={<ProductGrid />} />
+					<Route path="/brasier" element={<ProductGrid name={"Brasier"} />} />
+					<Route path="/panties" element={<ProductGrid name={"Panties"} />} />
 					<Route
 						path="/"
 						element={
